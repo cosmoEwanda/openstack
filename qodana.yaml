@@ -8,6 +8,19 @@ profile:
 
 raiseLicenseProblems: true
 
+# Esclude cartelle o file che potrebbero generare falsi positivi
+exclude:
+  - name: Exclude virtualenv
+    paths:
+      - "venv"
+      - ".venv"
+      - "env"
+      - "__pypackages__"
+  - name: Exclude test / generated code (opzionale)
+    paths:
+      - "tests"
+      - "generated"
+
 include:
   - name: CheckDependencyLicenses
   - name: JsCoverageInspection
